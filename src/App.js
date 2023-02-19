@@ -10,6 +10,7 @@ function App() {
       <div className="app">
         <Header />
         <Routes>
+          <Route path="/login" element={[<h1>LOGIN PAGE</h1>]} />
           <Route path="/checkout" element={[<Checkout />]} />
           <Route path="/" element={[<Home />]} />
         </Routes>
