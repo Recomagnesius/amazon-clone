@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import amazonLogo from "./assets/amazon-logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { ShoppingBasket } from "@mui/icons-material";
 import { Link, useNavigate } from "react-router-dom";
+import { useStateValue } from "./StateProider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <Link to="/">
@@ -34,7 +37,9 @@ function Header() {
         <Link to="/checkout">
           <div className="header__optionBasket">
             <ShoppingBasket />
-            <span className="header__optionLineTwo header__basketCount">0</span>
+            <span className="header__optionLineTwo header__basketCount">
+              {basket?.length}
+            </span>
           </div>
         </Link>
       </div>
