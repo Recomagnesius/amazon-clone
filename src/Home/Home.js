@@ -8,7 +8,9 @@ function Home() {
       <div className="home__container">
         <img
           draggable="false"
-          ondragstart="return false;"
+          onDragStart={(e) => {
+            return false;
+          }}
           className="home__image unselectable"
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt="background banner"
@@ -35,14 +37,14 @@ function Home() {
         <div className="home__row">
           <Product
             id={1234}
-            title="MANSCAPED® Electric Groin Hair Trimmer, The Lawn Mower™ 3.0, Replaceable Ceramic Blade Heads, Waterproof Wet / Dry Clippers, Standing Recharge Dock, Ultimate Male Hygiene Razor"
+            title="MANSCAPED® Electric Groin Hair Trimmer, The Lawn Mower™ 3.0, Replaceable Ceramic Blade Heads, Waterproof Wet / Dry Clippers"
             price={29.99}
             image="https://m.media-amazon.com/images/I/61BJVOWR0hS._SL1500_.jpg"
             rating={5}
           />
           <Product
             id={1234}
-            title="SAMSUNG 32&rdquo; M80B 4K UHD HDR Smart Computer Monitor Screen with Streaming TV, SlimFit Camera Included, Wireless Remote PC Access, Alexa Built-In, LS32BM805UNXGO, White"
+            title="SAMSUNG 32&rdquo; M80B 4K UHD HDR Smart Computer Monitor Screen with Streaming TV, LS32BM805UNXGO, White"
             price={249.99}
             image="https://m.media-amazon.com/images/I/619GhhC0bIL._AC_SL1000_.jpg"
             rating={5}
